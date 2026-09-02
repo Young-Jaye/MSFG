@@ -1,0 +1,41 @@
+dataset:
+  name: mba
+  dataset: Mouse_Brain_Anterior
+  n_clusters: -1
+
+preprocessing:
+  highly_genes: 3000
+  min_cells: 100
+  target_sum: 10000.0
+  scale_max_value: 10.0
+  gft_on_feature: 1
+
+graph:
+  gft_fraction_feature: 0.2
+  radius: 250.0
+  k: 15
+  fusion_k: 30
+  fusion_t: 10
+  spatial_knn_k: 30
+
+model:
+  nhid1: 128
+  nhid2: 64
+  dropout: 0.1
+  att_hidden: 16
+
+training:
+  epochs: 600
+  lr: 0.0005
+  weight_decay: 0.0001
+  seed: 236017509
+  alpha: 2.8
+  beta: 1.8
+  gamma: 0.05
+  lambda_entropy: 0.1
+  eval_interval: 25
+
+provenance:
+  generated_at: "2026-03-05 20:20:19"
+  recorded_ari: 0.508271
+  note: Best MBA parameters supplied for the manuscript; n_clusters is derived from ground truth when set to -1.

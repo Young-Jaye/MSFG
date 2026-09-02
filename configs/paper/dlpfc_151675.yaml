@@ -1,0 +1,40 @@
+dataset:
+  name: dlpfc
+  dataset: "151675"
+  n_clusters: 7
+
+preprocessing:
+  highly_genes: 3000
+  min_cells: 100
+  target_sum: 10000.0
+  scale_max_value: 10.0
+  gft_on_feature: 1
+
+graph:
+  gft_fraction_feature: 0.25
+  radius: 150.0
+  k: 20
+  fusion_k: 20
+  fusion_t: 10
+  spatial_knn_k: 15
+
+model:
+  nhid1: 128
+  nhid2: 64
+  dropout: 0.1
+  att_hidden: 16
+
+training:
+  epochs: 600
+  lr: 0.0005
+  weight_decay: 0.0001
+  seed: 27485660
+  alpha: 2.0
+  beta: 0.1
+  gamma: 0.05
+  lambda_entropy: 0.1
+  eval_interval: 25
+
+provenance:
+  source: original Fuse-MGCN/todo.csv
+  note: Selected parameter set supplied for the manuscript.

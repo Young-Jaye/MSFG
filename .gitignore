@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.idea/
+.vscode/
+.ipynb_checkpoints/
+data/*
+result*/
+results/
+*.h5ad
+*.h5
+*.png
+*.pdf
+*.svg
+experiment_log*.csv
+scripts/
+# Large archives and model checkpoints
+*.tar
+*.zip
+*.pt
+*.pth
+*.ckpt
+
+# Local secrets
+.env
+.env.*
+
+Dockerfile
+.dockerignore
