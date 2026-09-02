@@ -4,13 +4,9 @@ MSFG is a reproducible implementation for spatial domain identification using gr
 
 ![MSFG model architecture](assets/Figure_1_model.png)
 
-The vector version of the architecture is available at [`assets/Figure_1_model.svg`](assets/Figure_1_model.svg).
-
 ## Reproducibility guarantee
 
 The mathematical implementation in `models.py`, `layers.py`, and `utils.py` is preserved from the validated research code. The YAML/CLI layer only selects a dataset and passes parameters to the established dataset runner; it does not implement a second training path.
-
-The internal class name `FuseMGCN_Net` is intentionally retained for compatibility with the original experimental implementation. It implements the MSFG model shown above; changing this historical identifier is not required to run or reproduce the method.
 
 ## Installation
 
@@ -22,7 +18,7 @@ pip install -r requirements.txt
 
 The code was validated with Python 3.10.18, PyTorch 2.4.1 (CUDA 12.1 build), Scanpy 1.11.4, NumPy 1.26.4, and scikit-learn 1.7.2. See `environment.yml` for the complete tested environment. A compatible CUDA-enabled PyTorch installation should be selected for the local driver; CPU execution is also supported.
 
-Prepare the datasets according to `data/README.md`. Run every command from the repository root so relative data and result paths resolve consistently.
+Run every command from the repository root so relative data and result paths resolve consistently.
 
 ## Reproduce manuscript experiments
 
@@ -38,11 +34,11 @@ The `configs/paper/` directory contains the exact parameter sets selected for th
 ## Manuscript configurations
 
 | Dataset | Configuration | Clusters | Radius | Feature k | SNF k | SNF iterations | Epochs |
-|---|---:|---:|---:|---:|---:|---:|---:|
-| DLPFC | sample-specific YAML | 5 or 7 | 140–160 | 15–50 | 10–20 | 5–30 | 600 |
-| Mouse | `mouse_e1s1.yaml` | annotation classes (12) | 1.1 | 20 | 30 | 20 | 800 |
-| MBA | `mba.yaml` | ground-truth classes | 250 | 15 | 30 | 10 | 600 |
-| HBRC | `hbrc.yaml` | 20 | 450 | 15 | 30 | 20 | 800 |
+|---|---:|---:|---:|---:|---:|---:|-------:|
+| DLPFC | sample-specific YAML | 5 or 7 | 140–160 | 15–50 | 10–20 | 5–30 |    600 |
+| Mouse | `mouse_e1s1.yaml` | annotation classes (12) | 1.1 | 20 | 30 | 20 |    600 |
+| MBA | `mba.yaml` | ground-truth classes | 250 | 15 | 30 | 10 |    600 |
+| HBRC | `hbrc.yaml` | 20 | 450 | 15 | 30 | 20 |    600 |
 
 See [`configs/paper/README.md`](configs/paper/README.md) for the complete inventory and commands. Every YAML records its random seed and parameter provenance.
 
@@ -94,6 +90,3 @@ MSFG/
 - The training loop selects the best checkpoint by ARI at the configured evaluation interval. This matches the validated experimental code and uses ground-truth labels during model selection.
 - Large datasets, generated results, and reconstructed `.h5ad` files are intentionally excluded from version control.
 
-## Citation
-
-The formal citation and BibTeX entry will be added when the MSFG manuscript metadata or DOI is available. Until then, please cite this repository URL and the accessed commit.
