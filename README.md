@@ -33,18 +33,7 @@ The `configs/paper/` directory contains the exact parameter sets selected for th
 
 ## Manuscript configurations
 
-| Dataset | Configuration | Clusters | Radius | Feature k | SNF k | SNF iterations | Epochs |
-|---|---:|---:|---:|---:|---:|---:|-------:|
-| DLPFC | sample-specific YAML | 5 or 7 | 140–160 | 15–50 | 10–20 | 5–30 |    600 |
-| Mouse | `mouse_e1s1.yaml` | annotation classes (12) | 1.1 | 20 | 30 | 20 |    600 |
-| MBA | `mba.yaml` | ground-truth classes | 250 | 15 | 30 | 10 |    600 |
-| HBRC | `hbrc.yaml` | 20 | 450 | 15 | 30 | 20 |    600 |
-
 See [`configs/paper/README.md`](configs/paper/README.md) for the complete inventory and commands. Every YAML records its random seed and parameter provenance.
-
-## Configuration precedence
-
-Each runner first loads the fixed shared defaults in `utils.py`, then its dataset defaults, and finally the non-empty values supplied by YAML. Mouse always derives `n_clusters` from `obs['annotation']`; MBA derives it from ground truth when `n_clusters <= 0`.
 
 ## Optional parameter sweeps
 
