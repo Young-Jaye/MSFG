@@ -26,3 +26,8 @@ scripts/
 
 Dockerfile
 .dockerignore
+
+# Keep README assets
+!assets/
+!assets/*.png
+!assets/*.svg
