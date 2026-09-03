@@ -14,10 +14,9 @@ graph:
   gft_fraction_feature: 0.28
   radius: 1.1
   k: 20
-  fusion_k: 30
-  fusion_t: 20
+  fusion_k: 20
+  fusion_t: 15
   spatial_knn_k: 20
-
 model:
   nhid1: 128
   nhid2: 64
@@ -25,7 +24,7 @@ model:
   att_hidden: 16
 
 training:
-  epochs: 800
+  epochs: 600
   lr: 0.0005
   weight_decay: 0.0001
   seed: 637602023
@@ -35,7 +34,3 @@ training:
   lambda_entropy: 0.1
   eval_interval: 25
 
-provenance:
-  generated_at: "2026-01-23 22:54:12"
-  source_dataset_path: data/mouse/E1S1.h5ad
-  note: Best E1S1 parameters supplied for the manuscript; the runner verifies 12 clusters from obs.annotation.

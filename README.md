@@ -29,7 +29,7 @@ python train.py --config configs/paper/mba.yaml
 python train.py --config configs/paper/hbrc.yaml
 ```
 
-The `configs/paper/` directory provides the complete set of configurations used for the manuscript, including sample-specific YAML files for all 12 DLPFC samples and individual YAML files for mouse E1S1, MBA, and HBRC. Each configuration records the parameters required to reproduce the corresponding experiment. To run a new experiment, copy and modify an existing YAML file while keeping the manuscript configurations unchanged.
+The `configs/paper/` directory provides example configurations for the four datasets evaluated in the manuscript: DLPFC, mouse E1S1, MBA, and HBRC. Each YAML file records a representative parameter configuration for running the corresponding dataset. To run a new experiment, copy and modify an existing YAML file while keeping the manuscript configurations unchanged.
 
 ## Optional parameter sweeps
 

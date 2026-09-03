@@ -34,7 +34,3 @@ training:
   gamma: 0.1
   lambda_entropy: 0.1
   eval_interval: 25
-
-provenance:
-  source: original Fuse-MGCN/todo.csv
-  note: Selected parameter set supplied for the manuscript.

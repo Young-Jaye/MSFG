@@ -11,11 +11,11 @@ preprocessing:
   gft_on_feature: 1
 
 graph:
-  gft_fraction_feature: 0.25
-  radius: 450.0
-  k: 15
-  fusion_k: 30
-  fusion_t: 20
+  gft_fraction_feature: 0.28
+  radius: 145.0
+  k: 20
+  fusion_k: 20
+  fusion_t: 15
   spatial_knn_k: 20
 
 model:
@@ -25,7 +25,7 @@ model:
   att_hidden: 16
 
 training:
-  epochs: 800
+  epochs: 600
   lr: 0.0005
   weight_decay: 0.0001
   seed: 166081447
@@ -34,8 +34,3 @@ training:
   gamma: 0.05
   lambda_entropy: 0.1
   eval_interval: 25
-
-provenance:
-  generated_at: "2026-02-01 11:00:12"
-  source_dataset_path: original project data/Human_Breast_Cancer
-  note: Best HBRC parameters supplied for the manuscript.
