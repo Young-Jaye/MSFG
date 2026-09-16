@@ -72,6 +72,5 @@ MSFG/
 
 - Run commands from the repository root; dataset and result paths are relative to it.
 - Record the YAML file, random seed, package environment, and dataset version for every reported result.
-- The training loop selects the best checkpoint by ARI at the configured evaluation interval. This matches the validated experimental code and uses ground-truth labels during model selection.
 - Large datasets, generated results, and reconstructed `.h5ad` files are intentionally excluded from version control.
 
