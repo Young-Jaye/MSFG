@@ -13,8 +13,8 @@ preprocessing:
 graph:
   gft_fraction_feature: 0.25
   radius: 150.0
-  k: 20
-  fusion_k: 15
+  k: 15
+  fusion_k: 20
   fusion_t: 20
   spatial_knn_k: 20
 
