@@ -1,0 +1,21 @@
+
+cff-version: 1.2.0
+message: "If you use MSFG, please cite this software."
+title: "MSFG: Multi-view Sparse Graph Fusion for Domain Identification in Spatial Transcriptomics"
+type: software
+
+authors:
+  - family-names: Yang
+    given-names: Huazhe
+  - family-names: Yang
+    given-names: Bo
+  - family-names: Wang
+    given-names: Meng
+  - family-names: Su
+    given-names: Xueping
+  - family-names: Liu
+    given-names: Yizhuo
+
+version: 1.0.0
+license: MIT
+repository-code: "https://github.com/Young-Jaye/MSFG"
